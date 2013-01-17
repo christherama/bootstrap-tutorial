@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="images/bootstrap-icon.png" />
+	
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		
+		<title>Bootstrap Tutorials</title>
+	</head>
+	<body data-spy="scroll" data-target="#nav">
+		<div id="page-wrapper">
+			<div id="nav" class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="brand" href="#">Bootstrap Tutorials</a>
+						<ul class="nav">
+							<li><a href="#overview">Overview</a></li>
+							<li><a href="#dropdowns">Dropdown Menus</a></li>
+							<li><a href="#carousels">Carousels</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="main-content" class="container">
+				<div id="overview" class="section">
+					<h2>Overview</h2>
+					<p>Bootstrap is a CSS and Javascript library coded by developers of Twitter and made freely available to the public at <a href="http://twitter.github.com/bootstrap">http://twitter.github.com/bootstrap</a>. This library allows you to get some quick styling and interesting interactions in your site or web app without much design work needed on your part.</p>
+					<h3>Basic Usage</h3>
+					<p>In general, to use all that Bootstrap has to offer, you'll have to do the following:</p>
+					<ol>
+						<li><a href="http://twitter.github.com/bootstrap/assets/bootstrap.zip">Download Bootstrap</a> and extract it to your project</li>
+						<li>In your HTML file's <code>&lt;head&gt;</code> element...
+							<ul>
+								<li>Link to the Bootstrap CSS file that is included in your extract files:
+									<pre>&lt;link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" /&gt;</pre>
+								</li>
+								<li>Reference the jQuery (must appear first) and Bootstrap Javascript files:
+							<pre>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="bootstrap/js/bootstrap.js"&gt;&lt;/script&gt;</pre>
+								</li>
+							</ul>
+						</li>
+						<li>Include the required markup <strong>and any attributes</strong> required to produce your desired styling or effect.</li>
+					</ol>
+				</div>
+				<div id="dropdowns" class="section">
+					<h2>Dropdown Menus <small class="pull-right"><a href="http://twitter.github.com/bootstrap/javascript.html#dropdowns" target="_blank">Dropdowns on Bootstrap</a></small></h2>
+					<p>You can produce dropdown menus with the simple addition of a the attribute <code>data-toggle="dropdown"</code> to an anchor that is a sibling to a <code>&lt;ul&gt;</code> as follows:</p>
+					<h3>Markup</h3>
+					<pre>&lt;div class="dropdown"&gt;
+	&lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;Dropdown&lt;/a&gt;
+	&lt;ul class="dropdown-menu"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</pre>
+					<h3>Result</h3>
+					<div class="well">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="carousels" class="section">
+					<h2>Carousels<small class="pull-right"><a href="http://twitter.github.com/bootstrap/javascript.html#carousel" target="_blank">Carousels on Bootstrap</a></small></h2>
+					<p>The use of carousels allows you to drop a slideshow in your site that visitors can page through. This is accomplished with the use of a wrapper div with <code>class="carousel"</code>, and a child div with <code>class="carousel-inner"</code>, itself containing child div's with <code>class="item"</code>, each representing a "slide" of the carousel.</p>
+					<h3>Markup</h3>
+					<pre>&lt;div id="myCarousel" class="carousel slide"&gt;
+	&lt;!-- Carousel items --&gt;
+	&lt;div class="carousel-inner"&gt;
+		&lt;div class="active item"&gt;
+			&lt;img src="http://placehold.it/940x400/57aade/ffffff&amp;text=Image+1"&gt;
+			&lt;div class="carousel-caption"&gt;
+				&lt;h4&gt;Sample Title 1&lt;/h4&gt;
+				&lt;p&gt;Sample description for IMAGE 1. This is just a test.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="item"&gt;
+			&lt;img src="http://placehold.it/940x400/e8117f/ffffff&amp;text=Image+2"&gt;
+			&lt;div class="carousel-caption"&gt;
+				&lt;h4&gt;Sample Title 2&lt;/h4&gt;
+				&lt;p&gt;Sample description for IMAGE 2. This is just a test.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="item"&gt;
+			&lt;img src="http://placehold.it/940x400/FF6B2B/ffffff&amp;text=Image+3"&gt;
+			&lt;div class="carousel-caption"&gt;
+				&lt;h4&gt;Sample Title 3&lt;/h4&gt;
+				&lt;p&gt;Sample description for IMAGE 3. This is just a test.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Carousel nav --&gt;
+	&lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+	&lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;</pre>
+					<h3>Result</h3>
+					<div id="myCarousel" class="carousel slide">
+						<!-- Carousel items -->
+						<div class="carousel-inner">
+							<div class="active item">
+								<img src="http://placehold.it/940x400/57aade/ffffff&text=Image+1">
+								<div class="carousel-caption">
+									<h4>Sample Title 1</h4>
+									<p>Sample description for IMAGE 1. This is just a test.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="http://placehold.it/940x400/e8117f/ffffff&text=Image+2">
+								<div class="carousel-caption">
+									<h4>Sample Title 2</h4>
+									<p>Sample description for IMAGE 2. This is just a test.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="http://placehold.it/940x400/FF6B2B/ffffff&text=Image+3">
+								<div class="carousel-caption">
+									<h4>Sample Title 3</h4>
+									<p>Sample description for IMAGE 3. This is just a test.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel nav -->
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+						<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
